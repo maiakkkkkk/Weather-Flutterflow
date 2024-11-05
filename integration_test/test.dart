@@ -28,23 +28,6 @@ void main() async {
     await appState.initializePersistedState();
   });
 
-  testWidgets('Login Test', (WidgetTester tester) async {
-    _overrideOnError();
-
-    await tester.pumpWidget(ChangeNotifierProvider(
-      create: (context) => FFAppState(),
-      child: MyApp(),
-    ));
-
-    await tester.pumpAndSettle(Duration(milliseconds: 1000));
-    await tester.enterText(
-        find.byKey(ValueKey('emailAddress_a12c')), 'teste@exemplo.com');
-    await tester.enterText(find.byKey(ValueKey('password_blrs')), '12345678');
-    await tester.tap(find.byKey(ValueKey('Button_l6ju')));
-    await tester.pumpAndSettle(Duration(milliseconds: 1000));
-    expect(find.text('Reportar clima'), findsWidgets);
-  });
-
   testWidgets('Cadastro Test', (WidgetTester tester) async {
     _overrideOnError();
 
@@ -59,6 +42,23 @@ void main() async {
     await tester.enterText(find.byKey(ValueKey('password_blrs')), '12345678');
     await tester.enterText(
         find.byKey(ValueKey('passwordConfirm_6tra')), '12345678');
+    await tester.tap(find.byKey(ValueKey('Button_l6ju')));
+    await tester.pumpAndSettle(Duration(milliseconds: 1000));
+    expect(find.text('Reportar clima'), findsWidgets);
+  });
+
+  testWidgets('Login Test', (WidgetTester tester) async {
+    _overrideOnError();
+
+    await tester.pumpWidget(ChangeNotifierProvider(
+      create: (context) => FFAppState(),
+      child: MyApp(),
+    ));
+
+    await tester.pumpAndSettle(Duration(milliseconds: 1000));
+    await tester.enterText(
+        find.byKey(ValueKey('emailAddress_a12c')), 'teste@exemplo.com');
+    await tester.enterText(find.byKey(ValueKey('password_blrs')), '12345678');
     await tester.tap(find.byKey(ValueKey('Button_l6ju')));
     await tester.pumpAndSettle(Duration(milliseconds: 1000));
     expect(find.text('Reportar clima'), findsWidgets);

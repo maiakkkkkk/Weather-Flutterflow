@@ -1,9 +1,6 @@
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/flutter_flow_widgets.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:provider/provider.dart';
 import 'notifipage_model.dart';
 export 'notifipage_model.dart';
 
@@ -47,7 +44,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     width: MediaQuery.sizeOf(context).width * 1.0,
                     height: 100.0,
@@ -55,7 +52,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                       color: FlutterFlowTheme.of(context).primary,
                     ),
                     child: Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(
+                      padding: const EdgeInsetsDirectional.fromSTEB(
                           16.0, 24.0, 16.0, 24.0),
                       child: Column(
                         mainAxisSize: MainAxisSize.min,
@@ -79,7 +76,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: ListView(
                     padding: EdgeInsets.zero,
                     primary: false,
@@ -99,7 +96,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -148,7 +145,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
@@ -166,7 +163,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -187,7 +184,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.wb_sunny,
                                       color: Colors.orange,
                                       size: 24.0,
@@ -214,7 +211,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
@@ -232,7 +229,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -281,7 +278,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
@@ -299,7 +296,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -320,7 +317,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.air,
                                       color: Colors.green,
                                       size: 24.0,
@@ -347,7 +344,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
@@ -365,7 +362,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                             borderRadius: BorderRadius.circular(12.0),
                           ),
                           child: Padding(
-                            padding: EdgeInsetsDirectional.fromSTEB(
+                            padding: const EdgeInsetsDirectional.fromSTEB(
                                 16.0, 16.0, 16.0, 16.0),
                             child: Column(
                               mainAxisSize: MainAxisSize.min,
@@ -386,7 +383,7 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                             letterSpacing: 0.0,
                                           ),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       Icons.wb_sunny,
                                       color: Color(0xFFE91E63),
                                       size: 24.0,
@@ -413,16 +410,16 @@ class _NotifipageWidgetState extends State<NotifipageWidget> {
                                         letterSpacing: 0.0,
                                       ),
                                 ),
-                              ].divide(SizedBox(height: 8.0)),
+                              ].divide(const SizedBox(height: 8.0)),
                             ),
                           ),
                         ),
                       ),
-                    ].divide(SizedBox(height: 16.0)),
+                    ].divide(const SizedBox(height: 16.0)),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
+                  padding: const EdgeInsetsDirectional.fromSTEB(16.0, 0.0, 16.0, 0.0),
                   child: Container(
                     height: 80.0,
                   ),
