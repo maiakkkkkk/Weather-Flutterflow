@@ -1,39 +1,44 @@
+# Workflow para CI com Flutter no GitHub Actions em Windows
+
 name: Flutter CI
+
 on:
   push:
     branches: [ "flutterflow" ]
   pull_request:
     branches: [ "flutterflow" ]
+
 jobs:
   build:
     runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
-      
-      # Configurar Java (muitos projetos Flutter precisam disso)
-      - uses: actions/setup-java@v3
+      # Step 1: Fazer o checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2: Instalar o SDK Flutter
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
         with:
-          distribution: 'zulu'
-          java-version: '11'
-      
-      - uses: subosito/flutter-action@v2
-        with:
-          flutter-version: 'stable'
-          channel: 'stable'
-          cache: true # Ativa o cache para melhorar performance
-      
-      # Limpa as dependências antigas e força nova instalação
-      - name: Clean and get dependencies
-        run: |
-          flutter clean
-          flutter pub cache repair
-          flutter pub get
-      
+          flutter-version: "stable"  # ou uma versão específica, como "3.3.0"
+
+      # Step 3: Verificar a versão do Flutter (opcional, para garantir que está instalado)
+      - name: Verify Flutter version
+        run: flutter --version
+
+      # Step 4: Instalar as dependências do projeto
+      - name: Install dependencies
+        run: flutter pub get
+
+      # Step 5: Verificar formatação do código
       - name: Verify formatting
         run: flutter format --set-exit-if-changed .
-      
+
+      # Step 6: Analisar o código para verificar problemas comuns
       - name: Analyze project source
         run: flutter analyze
-      
+
+      # Step 7: Executar os testes do projeto
       - name: Run tests
         run: flutter test --reporter=expanded
