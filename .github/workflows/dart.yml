@@ -1,0 +1,43 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Dart
+
+on:
+  push:
+    branches: [ "flutterflow" ]
+  pull_request:
+    branches: [ "flutterflow" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    #step 1: checkout do código
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      #step 2: instalar o SDK Dart
+      - name: Set up Dart SDK
+        uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+        with:
+          sdk: stable
+          
+      #step 3: Instalar dependencias do projeto
+      - name: Install dependencies
+        run: dart pub get
+
+      # Step 4: Verificar formatação do código (deixar este passo ativo)
+      - name: Verify formatting
+        run: dart format --output=none --set-exit-if-changed .
+
+      # Step 5: Analisar o código para verificar problemas comuns
+      - name: Analyze project source
+        run: dart analyze --fatal-warnings
+
+      # Step 6: Executar os testes do projeto
+      - name: Run tests
+        run: dart test --reporter=expanded
