@@ -38,11 +38,11 @@ void main() async {
 
     await tester.pumpAndSettle(Duration(milliseconds: 1000));
     await tester.enterText(
-        find.byKey(ValueKey('emailAddress_a12c')), 'teste@exemplo.com');
-    await tester.enterText(find.byKey(ValueKey('password_blrs')), '12345678');
+        find.byKey(ValueKey('emailAddress_tqyp')), 'teste@exemplo.com');
+    await tester.enterText(find.byKey(ValueKey('password_1zqi')), '12345678');
     await tester.enterText(
         find.byKey(ValueKey('passwordConfirm_6tra')), '12345678');
-    await tester.tap(find.byKey(ValueKey('Button_l6ju')));
+    await tester.tap(find.byKey(ValueKey('Button_idyc')));
     await tester.pumpAndSettle(Duration(milliseconds: 1000));
     expect(find.text('Reportar clima'), findsWidgets);
   });

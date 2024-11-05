@@ -165,6 +165,7 @@ class _CriarContaWidgetState extends State<CriarContaWidget> {
                                     child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
+                                        key: const ValueKey('emailAddress_tqyp'),
                                         controller:
                                             _model.emailAddressTextController,
                                         focusNode: _model.emailAddressFocusNode,
@@ -246,6 +247,7 @@ class _CriarContaWidgetState extends State<CriarContaWidget> {
                                     child: SizedBox(
                                       width: double.infinity,
                                       child: TextFormField(
+                                        key: const ValueKey('password_1zqi'),
                                         controller:
                                             _model.passwordTextController,
                                         focusNode: _model.passwordFocusNode,
@@ -444,6 +446,7 @@ class _CriarContaWidgetState extends State<CriarContaWidget> {
                                     padding: const EdgeInsetsDirectional.fromSTEB(
                                         0.0, 0.0, 0.0, 16.0),
                                     child: FFButtonWidget(
+                                      key: const ValueKey('Button_idyc'),
                                       onPressed: () async {
                                         GoRouter.of(context).prepareAuthEvent();
                                         if (_model
