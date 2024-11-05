@@ -54,8 +54,8 @@ class _TelaProfileWidgetState extends State<TelaProfileWidget> {
               color: FlutterFlowTheme.of(context).primaryText,
               size: 30.0,
             ),
-            onPressed: () {
-              print('IconButton pressed ...');
+            onPressed: () async {
+              context.safePop();
             },
           ),
           title: Text(
@@ -210,7 +210,7 @@ class _TelaProfileWidgetState extends State<TelaProfileWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Notification Settings',
+                              'Configurações de notificação',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
@@ -268,7 +268,7 @@ class _TelaProfileWidgetState extends State<TelaProfileWidget> {
                             padding: const EdgeInsetsDirectional.fromSTEB(
                                 12.0, 0.0, 0.0, 0.0),
                             child: Text(
-                              'Edit Profile',
+                              'Editar perfil',
                               style: FlutterFlowTheme.of(context)
                                   .bodyLarge
                                   .override(
