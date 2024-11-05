@@ -1,43 +1,39 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
-
-name: Dart
-
+name: Flutter CI
 on:
   push:
     branches: [ "flutterflow" ]
   pull_request:
     branches: [ "flutterflow" ]
-
 jobs:
   build:
     runs-on: windows-latest
-
     steps:
-    #step 1: checkout do código
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      #step 2: instalar o SDK Dart
-      - name: Set up Dart SDK
-        uses: dart-lang/setup-dart@9a04e6d73cca37bd455e0608d7e5092f881fd603
+      - uses: actions/checkout@v4
+      
+      # Configurar Java (muitos projetos Flutter precisam disso)
+      - uses: actions/setup-java@v3
         with:
-          sdk: stable
-          
-      #step 3: Instalar dependencias do projeto
-      - name: Install dependencies
-        run: dart pub get
-
-      # Step 4: Verificar formatação do código (deixar este passo ativo)
+          distribution: 'zulu'
+          java-version: '11'
+      
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 'stable'
+          channel: 'stable'
+          cache: true # Ativa o cache para melhorar performance
+      
+      # Limpa as dependências antigas e força nova instalação
+      - name: Clean and get dependencies
+        run: |
+          flutter clean
+          flutter pub cache repair
+          flutter pub get
+      
       - name: Verify formatting
-        run: dart format --output=none --set-exit-if-changed .
-
-      # Step 5: Analisar o código para verificar problemas comuns
+        run: flutter format --set-exit-if-changed .
+      
       - name: Analyze project source
-        run: dart analyze --fatal-warnings
-
-      # Step 6: Executar os testes do projeto
+        run: flutter analyze
+      
       - name: Run tests
-        run: dart test --reporter=expanded
+        run: flutter test --reporter=expanded
