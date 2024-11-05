@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 import 'package:flutter/foundation.dart';
 
 import '/flutter_flow/flutter_flow_util.dart';
@@ -27,7 +28,7 @@ class RealtimeWeatherCall {
 
     return ApiManager.instance.makeApiCall(
       callName: 'Realtime Weather',
-      apiUrl: '$baseUrl/current.json?q=$place&lang=pt_br',
+      apiUrl: '${baseUrl}/current.json?q=${place}&lang=pt_br',
       callType: ApiCallType.GET,
       headers: {
         'x-rapidapi-key': '19429bd1cemsh8647da8d2e19c97p1bd9acjsnccd2b1d68b76',
