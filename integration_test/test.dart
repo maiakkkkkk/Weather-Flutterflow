@@ -33,7 +33,9 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: MyApp(),
+      child: MyApp(
+        entryPage: CriarContaWidget(),
+      ),
     ));
 
     await tester.pumpAndSettle(Duration(milliseconds: 1000));
@@ -52,7 +54,9 @@ void main() async {
 
     await tester.pumpWidget(ChangeNotifierProvider(
       create: (context) => FFAppState(),
-      child: MyApp(),
+      child: MyApp(
+        entryPage: LoginWidget(),
+      ),
     ));
 
     await tester.pumpAndSettle(Duration(milliseconds: 1000));
