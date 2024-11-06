@@ -20,7 +20,7 @@ jobs:
       # Step 2: Instalar o SDK Flutter
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
-        with:
+        #with:
           #flutter-version: "3.3.0"  # ou uma versão específica, como "3.3.0"
 
       # Step 3: Verificar a versão do Flutter (opcional, para garantir que está instalado)
