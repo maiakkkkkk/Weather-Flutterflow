@@ -1,9 +1,3 @@
-Perfeito — dá pra deixar seu README.md bem mais profissional, bilíngue (🇧🇷/🇺🇸) e visualmente agradável com seções, ícones e formatação padronizada de projeto Flutter.
-Aqui está uma versão aprimorada e organizada do seu README 👇
-
----
-
-````markdown
 # 🌦️ Weather App — Projeto Integrador / Integrative Project
 
 Aplicativo móvel desenvolvido em **Flutter** e **FlutterFlow**, com o objetivo de exibir informações meteorológicas em tempo real.  
@@ -53,58 +47,36 @@ It was built to demonstrate the use of **REST APIs**, **state management**, and 
 ### 🇧🇷 **Executar em um dispositivo físico (Android/iOS)**
 ```bash
 flutter test integration_test/test.dart
-````
 
-### 🇺🇸 **Run on a physical device (Android/iOS)**
+🌐 Executar no navegador / Run on Web Browser
 
-```bash
-flutter test integration_test/test.dart
-```
+Primeiro, inicie o chromedriver:
 
----
-
-### 🌐 **Executar no navegador / Run on Web Browser**
-
-Primeiro, inicie o `chromedriver`:
-
-```bash
 chromedriver --port=4444
-```
 
 Em seguida, execute:
 
-```bash
 flutter drive \
   --driver=test_driver/integration_test.dart \
   --target=integration_test/test.dart \
   -d chrome
 ```
+📘 Documentação / Documentation
 
----
+Guia oficial de testes de integração
 
-## 📘 Documentação / Documentation
+Execução no Firebase Test Lab
 
-* [Guia oficial de testes de integração](https://docs.flutter.dev/cookbook/testing/integration/introduction#5-run-the-integration-test)
-* [Execução no Firebase Test Lab](https://github.com/flutter/flutter/tree/main/packages/integration_test#firebase-test-lab)
+👨‍💻 Autor / Author
 
----
-
-## 👨‍💻 Autor / Author
-
-**Felipe Maia**
+Felipe Maia
 UX/UI Designer & Flutter Developer
-[GitHub](https://github.com/maiakkkkkk)
+GitHub
 
----
-
-## 🪄 Licença / License
+🪄 Licença / License
 
 Este projeto é de uso educacional e sem fins comerciais.
 This project is for educational purposes only.
 
-```
 
 ---
-
-Quer que eu adicione uma **seção de preview** (ex: capturas de tela ou gif mostrando o app rodando)? Isso deixa o README ainda mais atrativo — especialmente se você quiser usar no GitHub ou no portfólio.
-```
